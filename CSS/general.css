@@ -122,6 +122,10 @@ body {
   row-gap: 9.6rem;
 }
 
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -223,7 +227,8 @@ body {
   transition: all 0.3s;
 }
 
-.link:hover, .link:active {
+.link:hover,
+.link:active {
   color: #cf711f;
   border-bottom: 1px solid transparent;
 }
