@@ -488,8 +488,6 @@
   border-radius: 11px;
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   overflow: hidden;
-
-  height: 50rem;
 }
 
 .cta-text-box {
@@ -523,12 +521,14 @@
   margin-bottom: 1.2rem;
 }
 
-.cta-form input {
+.cta-form input,
+.cta-form select {
   width: 100%;
   padding: 1.2rem;
   font-size: 1.8rem;
   /* Zwingt zum Erben der Schriftart vom Parent-Element */
   font-family: inherit;
+  color: inherit;
   border: none;
   background-color: #fdf2e9;
   border-radius: 9px;
@@ -536,20 +536,25 @@
 }
 
 /* Placeholder per Pseudoelement ansprechen */
-.cta-form input::placeholder{
+.cta-form input::placeholder {
   color: #aaa;
 }
 
-.cta-form select {
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
-
-.cta-form button {
-}
-
-
 
 .cta-img-box {
   background-image: linear-gradient(to right bottom, rgba(235, 151, 78, 0.35), rgb(235, 151, 78, 0.35)), url("../img/eating.jpg");
   background-size: cover;
   background-position: center;
+}
+
+/********************************/
+/* FOOTER */
+/********************************/
+
+.footer {
+  padding: 9.6rem 0;
 }
