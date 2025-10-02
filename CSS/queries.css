@@ -130,11 +130,6 @@
     display: block;
     cursor: pointer;
     z-index: 9999;
-
-    /* TEST */
-    /* position: absolute;
-    top: 10px;
-    right: 10px; */
   }
 
   .main-nav {

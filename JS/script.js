@@ -14,6 +14,28 @@ btnNavElement.addEventListener("click", function () {
 });
 
 ///////////////////////////////////////////////////////////
+// Sticky Navigation
+
+const sectionHeroElement = document.querySelector(".section-hero");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    console.log(ent);
+
+    if (ent.isIntersecting === false) {
+      document.querySelector(".header").classList.add("sticky");
+    }
+  },
+  {
+    // in the viewport
+    root: null,
+    threshold: 0,
+  }
+);
+obs.observe(sectionHeroElement);
+
+///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement("div");
