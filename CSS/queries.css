@@ -123,9 +123,12 @@
     margin-top: 2.4rem;
   }
 
+  /* ################## */
   /* MOBILE NAVIGATION */
+  /* ################## */
   .btn-mobile-nav {
     display: block;
+    z-index: 1;
   }
 
   .main-nav {
