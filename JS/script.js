@@ -14,7 +14,7 @@ btnNavElement.addEventListener("click", function () {
 });
 
 ///////////////////////////////////////////////////////////
-// Sticky Navigation
+// STICKY NAVIGATION
 
 const sectionHeroElement = document.querySelector(".section-hero");
 
@@ -24,13 +24,18 @@ const obs = new IntersectionObserver(
     console.log(ent);
 
     if (ent.isIntersecting === false) {
-      document.querySelector(".header").classList.add("sticky");
+      document.body.classList.add("sticky");
+    }
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove("sticky");
     }
   },
   {
     // in the viewport
     root: null,
     threshold: 0,
+    // hier sind die height von 8rem (in Pixel) aus der .sticky Klasse
+    rootMargin: "-80px",
   }
 );
 obs.observe(sectionHeroElement);
